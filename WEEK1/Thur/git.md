@@ -20,7 +20,7 @@ git clone 仓库地址
 工作目录，资源管理器里能看见的文件夹就是工作区
 
 暂存区(Staging Area/Index)：.git/index
-__临时存储区域__，用于保存即将提交到Git仓库的修改内容
+**临时存储区域**，用于保存即将提交到Git仓库的修改内容
 
 本地仓库(Local Repository)：.git/objects
 即用git init创建的本地仓库，包含完整项目历史和元数据，是Git存储代码和版本信息的主要位置
@@ -29,38 +29,38 @@ Working Directory ->(git add) Staging Area/Index ->(git commit) Local Repository
 ![image1](C:\LEMON\NOTES\images\bc36947f-cf62-4711-8b07-bf7d5869c734.png)
 
 ## 添加和提交文件
-__git status__ 查看仓库的状态
+**git status** 查看仓库的状态
 红色：Untrack
 
-__git add__ 文件名 
-添加到__暂存区__
-绿色：被添加到了__暂存区__，等待被提交
+**git add** 文件名 
+添加到**暂存区**
+绿色：被添加到了**暂存区**，等待被提交
 use "git rm --cached <file\>..." to unstage
 git add \*.txt	提交所有txt结尾的文件
 git add .	把当前文件夹所有文件提交到暂存区
 
-__git commit -m "提交的信息"__
-提交__暂存区__中的文件
+**git commit -m "提交的信息"**
+提交**暂存区**中的文件
 
-__git log__	查看提交记录
+**git log**	查看提交记录
 git log --oneline	查看简洁提交记录
 
 ## git reset回退版本
 HEAD^ 上一版本
-__git reset --soft 版本ID__
+**git reset --soft 版本ID**
 回退到某一版本，并且保留工作区和暂存区的所有修改内容
 
-__git reset --hard ID__
+**git reset --hard ID**
 回退到某一版本，并且丢弃工作区和暂存区的所有修改内容
 
-__git reset --mixed ID__	(reset的默认参数)
+**git reset --mixed ID**	(reset的默认参数)
 回退到某一版本，并且保留工作区的修改内容，丢弃暂存区的修改内容
 
-__git reflog__	查看操作历史记录
-__git reset ID__	回退到某个操作前的版本
+**git reflog**	查看操作历史记录
+**git reset ID**	回退到某个操作前的版本
 
 ## 使用git diff查看差异
-__git diff__
+**git diff**
 默认比较工作区和暂存区之间的差异内容
 
 get diff HEAD
@@ -79,13 +79,13 @@ get diff HEAD~ HEAD file1.txt
 只查看此文件的差异内容
 
 get diff branch_name branch_name2
-比较__分支__之间的差异
+比较**分支**之间的差异
 
 ## 使用git rm删除文件
-__git ls-files__
-查看__暂存区__中的内容
+**git ls-files**
+查看**暂存区**中的内容
 
-__git rm 文件名__
+**git rm 文件名**
 从工作区和暂存区同时删除
 记得git commit -m "" 提交
 
@@ -164,7 +164,7 @@ git diff	查看冲突具体内容
 
 ## 回退和rebase
 alias <name\>=""	为指令创建别名
-使用rebase时，找到当前分支和目标分支的共同祖先，再把__当前分支__上从共同祖先到最新提交记录的所有提交都__移动到目标分支__的最新提交记录后面
+使用rebase时，找到当前分支和目标分支的共同祖先，再把**当前分支**上从共同祖先到最新提交记录的所有提交都**移动到目标分支**的最新提交记录后面
 
 
 merge
